@@ -1,0 +1,53 @@
+/* Popup.css */
+.popup {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    width: 300px;
+    z-index: 1001;
+    text-align: center;
+    font-family: 'Arial', sans-serif;
+  }
+  
+  .popup p {
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .popup button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background-color 0.3s;
+  }
+  
+  .popup button:hover {
+    background-color: #45a049;
+  }
+  
+  .popup .try-again-btn {
+    background-color: #e74c3c;
+  }
+  
+  .popup .try-again-btn:hover {
+    background-color: #c0392b;
+  }
+  
+  .popup .next-btn {
+    background-color: #3498db;
+  }
+  
+  .popup .next-btn:hover {
+    background-color: #2980b9;
+  }
+  

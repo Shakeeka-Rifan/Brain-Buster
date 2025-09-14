@@ -1,0 +1,315 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');
+
+/* Game Container with Background */
+.game-container-cartoonic {
+  background: url('../assets/images/jjj.png') no-repeat center center/cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: 'Fredoka One', cursive;
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* Dark Overlay */
+.game-container-cartoonic::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.2); /* Transparent dark overlay */
+  z-index: 1; /* Ensure overlay is above the background */
+}
+
+/* Ensure all game content appears above the overlay */
+.main-menu-btn,
+.banana-icon,
+.status-block,
+.question-board,
+.number-blocks,
+.cartoonic-button-3da,
+.popup {
+  position: relative;
+  z-index: 2; /* Content layer above the overlay */
+}
+
+.main-menu-btn{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 20px;
+    animation: bounce 2s infinite;
+    z-index: 2;
+    margin-left: 1400px;
+    border-radius: 20px;
+    border: none;
+    background-color: #cc3300;
+}
+
+/* Banana Icon */
+.banana-icone {
+  width: 100px;
+  height: auto;
+  position: absolute;
+  top: 90px;
+  animation: bounce 2s infinite;
+  z-index: 2;
+  margin-top: 109px;
+}
+
+/* Bouncing Animation */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+/* Title Styling */
+.game-container-cartoonic h2 {
+  font-size: 2.2rem;
+  color: rgb(255, 255, 255);
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.9);
+  margin-bottom: 10px;
+  z-index: 2;
+ font-weight: 200;
+  margin-top: 5px;
+  margin-bottom: 15x;
+  font-family: 'Fredoka One', cursive;
+}
+
+.hint-box {
+  position: absolute;
+  top: 20px;
+  margin-left: 20px;
+  background-color: #ffeb3b;
+  color: #333;
+  padding: 10px 15px;
+  font-size: 18px;
+  font-weight: bold;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border: 2px solid #ff9800;
+  text-align: center;
+  z-index: 2;
+  font-family: 'Fredoka One', cursive;
+}
+
+.hint-button {
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  background-color: #ff9800;
+  color: white;
+  padding: 8px 15px;
+  font-family: 'Fredoka One', cursive;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  margin-right: 1370px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.hint-button:hover {
+  background-color: #e68900;
+  z-index: 2;
+}
+
+.hint-button:disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
+  z-index: 2;
+}
+
+
+/* Wiggle Animation */
+@keyframes wiggle {
+  0%, 100% { transform: rotate(-2deg); }
+  50% { transform: rotate(2deg); }
+}
+
+/* Status Block for Timer & Score */
+.status-block {
+  display: flex;
+  gap: -70px;
+ 
+  padding: 10px 20px;
+ 
+ 
+  margin-bottom: 20px;
+  z-index: 2;
+  margin-top: 10px;
+}
+
+.s1{
+  margin-left: 20px;
+  background: linear-gradient(145deg, #ff7b00, #e4a994);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-left: -30px;
+}
+
+.s2{
+  margin-left: 20px;
+  background: linear-gradient(145deg, #ff7b00, #e4a994);
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  padding: 15px 20px;
+  margin-left: 120px;
+}
+
+/* 3D Cartoonic Question Board */
+.question-board {
+  background: #ffe066;
+  padding: 70px;
+  border: 6px solid #ffaa00;
+  border-radius: 25px;
+  box-shadow: 10px 10px 0px #ff9900;
+  margin: 20px 0;
+  animation: popIn 1s ease-out;
+  position: relative;
+  width: 500px;
+  height: 220px;
+  z-index: 2;
+}
+
+/* Pop-in Animation */
+@keyframes popIn {
+  0% { transform: scale(0.8); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+/* Question Image */
+.question-image {
+  max-width: 630px;
+  border-radius: 15px;
+  box-shadow: 5px 5px 0px #ffaa00;
+  margin-left: -67px;
+  margin-top: -62px;
+}
+
+/* 3D Number Blocks */
+.number-blocks {
+  display: grid;
+  grid-template-columns: repeat(10, 60px);
+  gap: 50px;
+  justify-content: center;
+  margin: 20px 0;
+  font-family: 'Fredoka', sans-serif;
+  border: #4f2a11;
+}
+
+.number-block {
+  background: linear-gradient(145deg, #ff7b00, #e4a994);
+  color: rgb(85, 48, 11);
+  font-size: 1.8rem;
+  padding: 15px;
+  width: 80px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 0 #cc3300, 0 10px 20px rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.number-block:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 #cc3300, 0 15px 25px rgba(0, 0, 0, 0.5);
+}
+
+.number-block:active, .number-block.selected {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #cc3300, 0 8px 15px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(145deg, #ff9900, #4f2a11);
+}
+
+/* 3D Cartoonic Button */
+.cartoonic-button-3da {
+  background: linear-gradient(145deg, #ff7b00, #ff4500);
+  color: white;
+  padding: 10px 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 0 #cc3300, 0 15px 20px rgba(0, 0, 0, 0.4);
+  z-index: 2;
+  font-weight: 500;
+  font-family: 'Fredoka', sans-serif;
+}
+
+.cartoonic-button-3da:hover {
+  background: linear-gradient(145deg, #ff9900, #ff6600);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 0 #cc3300, 0 20px 25px rgba(0, 0, 0, 0.5);
+}
+
+.cartoonic-button-3da:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #cc3300, 0 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Popup Styling */
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 10px 10px 0px #ffaa00;
+  text-align: center;
+  z-index: 3;
+}
+
+.popup button {
+  background: #ff7b00;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  box-shadow: 0 6px 0 #cc3300;
+}
+
+.popup button:hover {
+  background: #ff9900;
+  transform: translateY(-4px);
+  box-shadow: 0 10px 0 #cc3300;
+}
+
+.popup button:active {
+  transform: translateY(2px);
+  box-shadow: 0 4px 0 #cc3300;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .game-container-cartoonic h2 {
+    font-size: 1.5rem;
+  }
+
+  .question-image {
+    max-width: 90%;
+  }
+
+  .status-block {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
